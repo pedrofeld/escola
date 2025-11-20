@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Principal {
 
     public static void main(String[] args) {
@@ -27,8 +29,72 @@ public class Principal {
         System.out.println("Nome do funcionário: " + f.nome);
         System.out.println("Idade do funcionário: " + f.idade);
         System.out.println("Função do funcionário: " + f.funcao);
-        System.out.println("Salário do funcionário" + f.salario);
+        System.out.println("Salário do funcionário: " + f.salario);
+        
+        Turma turma = new Turma();
+        
+        // Configurando o professor
+        turma.prof = new Funcionario();
+        turma.prof.nome = "Elaine";
+        turma.prof.idade = 35;
+        turma.prof.funcao = "Professora de Matemática";
+        
+        // Configurando os alunos
+        turma.alunos = new ArrayList<Aluno>();
+        
+        // Adicionando primeiro aluno
+        Aluno aluno1 = new Aluno();
+        aluno1.setMatricula(1001);
+        aluno1.setNome("Laura Silva");
+        aluno1.setCpf("11122233344");
+        turma.alunos.add(aluno1);
+        
+        // Adicionando segundo aluno
+        Aluno aluno2 = new Aluno();
+        aluno2.setMatricula(1002);
+        aluno2.setNome("Carlos Oliveira");
+        aluno2.setCpf("22233344455");
+        turma.alunos.add(aluno2);
+        
+        // Adicionando terceiro aluno
+        Aluno aluno3 = new Aluno();
+        aluno3.setMatricula(1003);
+        aluno3.setNome("Mariana Santos");
+        aluno3.setCpf("33344455566");
+        turma.alunos.add(aluno3);
+        
+        // EXIBINDO TODOS OS DADOS DA TURMA
+        System.out.println("\n" + "=".repeat(50));
+        System.out.println("           DADOS COMPLETOS DA TURMA");
+        System.out.println("=".repeat(50));
+        
+        // Dados do Professor
+        System.out.println("\n--- PROFESSOR ---");
+        System.out.println("Nome: " + turma.prof.nome);
+        System.out.println("Idade: " + turma.prof.idade);
+        System.out.println("Função: " + turma.prof.funcao);
+        System.out.println("Salário: R$ " + Funcionario.salario);
+        
+        // Dados dos Alunos
+        System.out.println("\n--- ALUNOS DA TURMA ---");
+        System.out.println("Total de alunos: " + turma.alunos.size());
+        
+        for (int i = 0; i < turma.alunos.size(); i++) {
+            Aluno aluno = turma.alunos.get(i);
+            System.out.println("\nAluno " + (i + 1) + ":");
+            System.out.println("  Matrícula: " + aluno.getMatricula());
+            System.out.println("  Nome: " + aluno.getNome());
+            System.out.println("  CPF: " + aluno.getCpf());
+        }
+        
+        // Resumo da Turma
+        System.out.println("\n--- RESUMO DA TURMA ---");
+        System.out.println("Professor: " + turma.prof.nome);
+        System.out.println("Quantidade de alunos: " + turma.alunos.size());
+        System.out.println("Primeiro aluno: " + turma.alunos.get(0).getNome());
+        System.out.println("Último aluno: " + turma.alunos.get(turma.alunos.size() - 1).getNome());
     }
+
 }
 
 /*
