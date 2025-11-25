@@ -94,10 +94,18 @@ public class Principal {
         System.out.println("Primeiro aluno: " + turma.alunos.get(0).getNome());
         System.out.println("Último aluno: " + turma.alunos.get(turma.alunos.size() - 1).getNome());
         
+        System.out.println("\n--- Avaliação ---");
+        
         Avaliacao pedro = new Avaliacao(8,9,10);
         
         System.out.println("Média do Pedro: " + pedro.mediaAritmetica());
         System.out.println("Média ponderada do Pedro: " + pedro.mediaPonderada());
+        
+        System.out.println("\n--- ALUNO + AVALIAÇÃO ---");
+        
+        Aluno pedrinho = new Aluno("Pedro Teste", "000.111.222-33", "TI", new Avaliacao(9, 10, 9.5));
+        
+        pedrinho.info();
     }
 
 }
