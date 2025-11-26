@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Principal {
 
@@ -106,6 +108,22 @@ public class Principal {
         Aluno pedrinho = new Aluno("Pedro Teste", "000.111.222-33", "TI", new Avaliacao(9, 10, 9.5));
         
         pedrinho.info();
+        
+        // ArrayList
+        
+        List<String> novoArrayList = new ArrayList<>();
+        novoArrayList.add("A"); // Geralmente rápido
+        novoArrayList.get(0);   // Muito rápido - acesso direto
+        novoArrayList.add(1, "B"); // Lento - desloca elementos
+        System.out.println("ArrayList: " + novoArrayList);
+        
+        // LinkedList
+        
+        List<String> linkedList = new LinkedList<>();
+        linkedList.add("A");
+        linkedList.get(0);   // Lento - percorre até a posição
+        linkedList.add(1, "B"); // Rápido - apenas ajusta ponteiros
+        System.out.println("ArrayList: " + linkedList);
     }
 
 }
