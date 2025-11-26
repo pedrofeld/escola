@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -109,6 +110,10 @@ public class Principal {
         
         pedrinho.info();
         
+        // Listas
+        
+        System.out.println("\n--- Listas ---");
+        
         // ArrayList
         
         List<String> novoArrayList = new ArrayList<>();
@@ -138,12 +143,29 @@ public class Principal {
 		 pessoas.add("Peach");
 		 pessoas.add("Yoshi");
 		
-		 System.out.println(pessoas); // Lista todos os elementos
+		 System.out.println("Lista de pessoas: " + pessoas); // Lista todos os elementos
 		
 		 String item1 = pessoas.get(0); // Retorna o elemento de índice 0
+		 System.out.println("Item 1: " + item1);
 		 pessoas.remove(3); // Remove o elemento de índice 3
 		 int total = pessoas.size(); // Retorna a quantidade de elementos
+		 System.out.println("Total de pessoas após exclusão: " + total);
 		 pessoas.clear(); // Remove todos os elementos
+		 System.out.println("Lista de pessoas após remoção geral: " + pessoas);
+		 
+		 // HashMap
+		 
+	     System.out.println("\n--- HashMap ---");
+		 
+		 HashMap<String, String> capitals = new HashMap<String, String>();
+		 capitals.put("Brasil", "Brasilia");
+		 capitals.put("Argentina", "Buenos Aires");
+		 capitals.put("Paraguai", "Assunção");
+		 capitals.put("Uruguai", "Montevideo");
+
+		 System.out.println("Lista de capitais" + capitals); // Imprimindo todo o mapa
+
+		 System.out.println("Capital do Uruguai: " + capitals.get("Uruguai")); // Imprimindo apenas a capital do Uruguai
     }
 
 }
