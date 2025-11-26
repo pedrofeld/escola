@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -227,6 +228,36 @@ public class Principal {
 			
 			add(): Adiciona elementos mantendo a ordem
 		  */
+		 
+		 // Exemplos de métodos estáticos do Collections
+		 System.out.println("\n--- Métodos estáticos ---");
+		 
+		// Cria uma lista de string
+		 ArrayList<String> lista = new ArrayList<String>();
+		 lista.add("Mario");
+		 lista.add("Luigi");
+		 lista.add("Yoshi");
+		 lista.add("Toad");
+		 lista.add("Peach");
+
+		 // Imprime a lista na ordem original
+		 System.out.println("Ordem original: " + lista);
+
+		 // Coloca lista em uma ordem aleatória
+		 Collections.shuffle(lista);
+		 System.out.println("Ordem aleatória: " + lista);
+
+		 // Coloca lista em uma ordem alfabética
+		 Collections.sort(lista);
+		 System.out.println("Ordem alfabética: " + lista);
+
+		 // Inverte a ordem anterior da lista
+		 Collections.reverse(lista);
+		 System.out.println("Ordem anterior invertida" + lista);
+
+		 System.out.println("Maior elemento alfabético: " + Collections.max(lista));
+
+		 System.out.println("Menor elemento alfabético: " + Collections.min(lista));
     }
 
 }
