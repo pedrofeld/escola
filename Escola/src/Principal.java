@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class Principal {
 
@@ -198,6 +199,33 @@ public class Principal {
 			Busca rápida: Método contains() é muito eficiente
 			
 			Mario duplicado: A segunda adição é ignorada silenciosamente
+		  */
+		 
+		 // PriorityQueue
+		 System.out.println("\n--- PriorityQueue ---");
+		 
+		 // Criando a fila
+		 PriorityQueue<Integer> fila = new PriorityQueue<Integer>();
+
+		 // Adicionando elementos para fila usando add()
+		 fila.add(10);
+		 fila.add(20);
+		 fila.add(15);
+
+		 System.out.println("Elemento do topo da fila: " + fila.peek());
+
+		 System.out.println("Imprimindo e removendo o primeiro elemento: " + fila.poll());
+
+		 System.out.println("Imprimindo o elemento do topo novamente: " + fila.peek());
+		 
+		 /*
+			Ordem natural: Os elementos são ordenados automaticamente
+			
+			peek(): Mostra o primeiro elemento sem remover
+			
+			poll(): Remove e retorna o primeiro elemento
+			
+			add(): Adiciona elementos mantendo a ordem
 		  */
     }
 
