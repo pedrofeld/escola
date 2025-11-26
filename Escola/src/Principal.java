@@ -2,8 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.PriorityQueue;
 
 public class Principal {
@@ -258,6 +260,111 @@ public class Principal {
 		 System.out.println("Maior elemento alfabético: " + Collections.max(lista));
 
 		 System.out.println("Menor elemento alfabético: " + Collections.min(lista));
+		 
+		// Iterator
+		System.out.println("\n--- Iterator ---");
+		
+		// Diferentes formas de iterar coleções
+		System.out.println("Exemplo 1:");
+		
+		ArrayList<Integer> lista2 = new ArrayList<Integer>();
+		HashSet<Integer> conjunto = new HashSet<Integer>();
+		HashMap<String, Integer> mapa = new HashMap<String, Integer>();
+		int soma;
+		lista2.add(5);
+		lista2.add(10);
+		lista2.add(15);
+		lista2.add(20);
+
+		soma = 0; // For simples
+		for(int i = 0; i < lista2.size(); i++) {
+		    soma += lista2.get(i);
+		}
+		
+		System.out.println("Utilizando FOR simples: " + soma);
+
+		soma = 0; // For each
+		for(int item : lista2) {
+		    soma += item;
+		}
+		
+		System.out.println("Utilizando FOR EACH: " + soma);
+
+		soma = 0; // Iterator
+		// Iterator it = mapa.entrySet().iterator();
+		// Iterator it = conjunto.iterator();
+		Iterator it = lista2.iterator();
+		while(it.hasNext()) {
+		    soma += (int)it.next();
+		}
+		
+		System.out.println("Utilizando WHILE: " + soma);
+		
+		/*
+			For simples: Funciona apenas com ArrayList (acesso por índice)
+			
+			For each: Mais legível, mas não permite remoção
+			
+			Iterator: Controle total, funciona com qualquer coleção
+		 */
+		
+		// Iteração reversa com ListIterator
+		System.out.println("Exemplo 2:");
+		
+		// Suponha lista como um ArrayList com dados de algum tipo, por exemplo strings.
+		ListIterator it2 = lista.listIterator(lista.size());
+		while (it2.hasPrevious()) {
+		    System.out.println(it2.previous());
+		}
+		
+		ArrayList<String> novaLista = new ArrayList<String>();
+		novaLista.add("Maca");
+		novaLista.add("Manga");
+		novaLista.add("Abacate");
+		novaLista.add("Laranja");
+		novaLista.add("Pessego");
+        
+        System.out.println("Os elementos: ");
+        for (String s : novaLista) {
+            System.out.println(s);
+        }
+        
+        /*
+	        ListIterator é posicionado no final da lista
+	
+			hasPrevious() verifica se existe elemento anterior
+			
+			previous() retorna e move para o elemento anterior
+			
+			Resultado: A lista é impressa na ordem inversa
+         */
+        
+        System.out.println("Exemplo 3:");
+        Iterator i = novaLista.iterator();
+        String str = "";
+        while (i.hasNext()) {
+            str = (String) i.next();
+            if (str.equals("Laranja")) {
+                i.remove();
+                System.out.println("Laranja removida");
+                break;
+            }
+        }
+        
+        System.out.println("Os elementos: ");
+        for (String s : novaLista) {
+            System.out.println(s);
+        }
+        
+        /*
+			Iterator percorre: "Maca" → "Manga" → "Abacate" → "Laranja"
+			
+			Quando encontra "Laranja", chama i.remove()
+			
+			Vantagem: Remove diretamente da coleção original sem problemas
+			
+			Sem Iterator: Se tentasse lista.remove("Laranja") durante um for-each, causaria erro
+         */
     }
 
 }
