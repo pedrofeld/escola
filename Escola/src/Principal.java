@@ -346,4 +346,21 @@ public class Principal {
 	
 	Reverse (List<> lista): coloca todos os itens em ordem reversa.
 	
+--------------------------------------
+
+	Iterator
+	
+	O Iterator é um padrão de projeto que permite percorrer elementos de uma coleção sem 
+	expor sua estrutura interna.
+  
+	 PRINCIPAIS FUNÇÕES:
+	 - hasNext(): Verifica se existe próximo elemento
+	 - next(): Retorna o próximo elemento
+	 - remove(): Remove o elemento atual (OPERAÇÃO SEGURA)
+	 
+	 VANTAGENS:
+	 - Permite remover elementos durante a iteração SEM causar
+	 - ConcurrentModificationException
+	 - Funciona com qualquer tipo de coleção (ArrayList, HashSet, etc.)
+	 - Oferece iteração unidirecional eficiente
  */
