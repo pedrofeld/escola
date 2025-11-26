@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -166,6 +167,38 @@ public class Principal {
 		 System.out.println("Lista de capitais" + capitals); // Imprimindo todo o mapa
 
 		 System.out.println("Capital do Uruguai: " + capitals.get("Uruguai")); // Imprimindo apenas a capital do Uruguai
+		 
+		 // HashSet
+	     System.out.println("\n--- HashSet ---");
+
+		 
+		 HashSet<String> nomes = new HashSet<String>();
+		 nomes.add("Mario");
+		 nomes.add("Luigi");
+		 nomes.add("Yoshi");
+		 nomes.add("Mario"); // Mario já existe, portanto não será adicionado
+		 nomes.add("Peach");
+		 nomes.remove("Luigi"); // Remove Luigi
+
+		 System.out.println("Lista de nomes: " + nomes); // Imprime todos os nomes
+
+		 int totalNomes = nomes.size(); // Descobre total de itens
+
+		 if(nomes.contains("Luigi")) { // Confere se existe
+		     System.out.println("Ele está presente");
+		 } else {
+		     System.out.println("Não está presente");
+		 }
+		 
+		 /*
+			Elementos únicos: Não permite duplicatas
+
+			Ordem não garantida: Os elementos podem ser impressos em qualquer ordem
+			
+			Busca rápida: Método contains() é muito eficiente
+			
+			Mario duplicado: A segunda adição é ignorada silenciosamente
+		  */
     }
 
 }
