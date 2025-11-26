@@ -124,6 +124,26 @@ public class Principal {
         linkedList.get(0);   // Lento - percorre até a posição
         linkedList.add(1, "B"); // Rápido - apenas ajusta ponteiros
         System.out.println("ArrayList: " + linkedList);
+        
+		 // Declaração do array - tanto ArrayList quanto LinkedList
+		 // possuem métodos com a mesma assinatura, permitindo que o
+		 // mesmo código funcione da mesma forma, modificando apenas
+		 // a estrutura de dados escolhida.
+		
+		 ArrayList<String> pessoas = new ArrayList<String>();
+		 // LinkedList<String> pessoas = new LinkedList<String>();
+		
+		 pessoas.add("Mario");  // Adição de novos elementos
+		 pessoas.add("Luigi");
+		 pessoas.add("Peach");
+		 pessoas.add("Yoshi");
+		
+		 System.out.println(pessoas); // Lista todos os elementos
+		
+		 String item1 = pessoas.get(0); // Retorna o elemento de índice 0
+		 pessoas.remove(3); // Remove o elemento de índice 3
+		 int total = pessoas.size(); // Retorna a quantidade de elementos
+		 pessoas.clear(); // Remove todos os elementos
     }
 
 }
