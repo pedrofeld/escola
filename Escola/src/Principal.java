@@ -124,4 +124,19 @@ public class Principal {
 	
 	• Constantes: inteiramente com letras maiúsculas separadas por underline. 
 	Ex: VALOR_PI
-*/
+
+-------------------------------------
+
+	 HIERARQUIA DE ACESSO (do mais restritivo ao mais permissivo):
+	  
+	 PRIVATE - Apenas na própria classe
+	 DEFAULT - Classes do mesmo pacote  
+	 PROTECTED - Classes do mesmo pacote + subclasses (mesmo em outros pacotes)
+	 PUBLIC - Qualquer classe em qualquer pacote
+	 
+	 MESMA CLASSE: Todos os modificadores permitem acesso
+	 MESMO PACOTE: Public, Protected e Default permitem acesso
+	 SUBCLASSE MESMO PACOTE: Public, Protected e Default permitem acesso
+	 SUBCLASSE OUTRO PACOTE: Public e Protected permitem acesso
+	 OUTRO PACOTE: Apenas Public permite acesso
+ */
