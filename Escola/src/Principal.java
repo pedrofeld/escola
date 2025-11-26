@@ -157,4 +157,38 @@ public class Principal {
 	 SUBCLASSE MESMO PACOTE: Public, Protected e Default permitem acesso
 	 SUBCLASSE OUTRO PACOTE: Public e Protected permitem acesso
 	 OUTRO PACOTE: Apenas Public permite acesso
+	 
+--------------------------------------
+
+	Classes Collections
+	
+	HashSet na computação, o termo Hash diz respeito a uma função que transforma 
+	um valor em outro, e a palavra Set tem diversos significados diferentes sendo 
+	que, nessa situação específica, significa conjunto. Então uma HashSet é um conjunto 
+	de elementos organizados por meio de uma função Hash. Ela realiza operações de adição, 
+	remoção e busca de forma muito rápida, contudo, não garante uma ordem dos elementos.
+
+	LinkedHashSet é semelhante a HashSet, porém, ele armazena a ordem em que os elementos 
+	foram adicionados.
+
+	HashMap é a estrutura de dados também baseada em Hash, com a diferença que é possível 
+	mapear (daí o nome Map) uma ID de um tipo diverso. Por exemplo, podemos ordenar os filmes 
+	de um catálogo não por um valor inteiro, mas por uma string contendo o nome do filme 
+	seguido do ano de exibição. Não possui ordem garantida.
+
+	TreeMap semelhante a HashMap, entretanto, também armazena a ordem dos itens, essa ordem 
+	pode ser livremente manipulada combinando as características de em um array.
+
+	LinkedHashMap é semelhante a HashMap, todavia, internamente também armazena a ordem em 
+	que os elementos foram adicionados.
+
+	Queue é uma estrutura de dados geralmente adotada para representar filas de prioridade, 
+	queue no inglês significa fila. Ela pode implementar uma fila de prioridade comum, 
+	semelhante a uma fila convencional no mundo real em que o primeiro elemento a entrar 
+	é o primeiro a ser atendido.
+
+	Stack é outra classe semelhante a fila de prioridades, mas implementa uma fila reversa 
+	à ordem de inserção, o último elemento adicionado é o primeiro a ser tratado, conceito 
+	denominado pilha, se empilharmos diversos objetos um sobre o outro, o último objeto 
+	empilhado será o primeiro que vamos acessar.
  */
