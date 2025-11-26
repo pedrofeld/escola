@@ -294,4 +294,25 @@ public class Principal {
 	à ordem de inserção, o último elemento adicionado é o primeiro a ser tratado, conceito 
 	denominado pilha, se empilharmos diversos objetos um sobre o outro, o último objeto 
 	empilhado será o primeiro que vamos acessar.
+	
+--------------------------------------
+	
+	Métodos estáticos do Collections
+	
+	Sort (List<> lista): coloca em ordem crescente os itens da lista passada por parâmetro.
+	
+	Shuffle (List<> lista, Random rnd): embaralha de forma aleatória os elementos da lista 
+	passada por parâmetro, a aleatoriedade do embaralhamento é dada pelo objeto da classe 
+	Random passado por parâmetro também.
+	
+	Max (Collection<> coll, Comparator<> comp): retorna o maior elemento, aceita tanto lista, 
+	quanto hash. Como segundo parâmetro, você pode indicar como deseja realizar a comparação 
+	com um objeto da classe Comparator, caso passe null como segundo parâmetro, a ordem 
+	natural será adotada.
+	
+	Min (Collection<> coll, Comparator<> comp): análogo ao max, porém, retorna o menor 
+	elemento.
+	
+	Reverse (List<> lista): coloca todos os itens em ordem reversa.
+	
  */
